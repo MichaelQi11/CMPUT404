@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .models import Choice, Question
 
 
-# we want this page to show when url goes to 
+# we want this page to show when url goes to
 # http://127.0.0.1:8000/polls/
 # def index(request):
 #     # get the newest 5 question instances
@@ -61,4 +61,4 @@ def vote(request, question_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
-        return HttpResponseRedirect(reverse('results', args=(question.id,))) # 'polls:results'
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id,))) # 'polls:results'
